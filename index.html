@@ -130,6 +130,11 @@
         .cta-container {
             margin: 2rem 0;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .cta-button {
@@ -138,10 +143,10 @@
             background-size: 200% 200%;
             color: #000;
             font-family: 'Nosifer', cursive;
-            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.3rem);
             font-weight: bold;
             text-decoration: none;
-            padding: 1.5rem 3rem;
+            padding: clamp(1rem, 3vw, 1.5rem) clamp(1.5rem, 4vw, 2.5rem);
             border-radius: 50px;
             border: 3px solid #ff6b35;
             box-shadow: 
@@ -151,6 +156,9 @@
             position: relative;
             overflow: hidden;
             animation: backgroundShift 3s ease infinite;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
         }
 
         @keyframes backgroundShift {
@@ -290,29 +298,61 @@
             }
             
             .invitation-text {
-                padding: 1.5rem;
-                margin: 1.5rem 0;
+                padding: 1.2rem;
+                margin: 1.2rem 0;
+                font-size: 1.1rem;
+            }
+            
+            .cta-container {
+                flex-direction: column;
+                gap: 0.8rem;
             }
             
             .cta-button {
-                padding: 1.2rem 2rem;
-                margin: 0.5rem !important;
+                width: 100%;
+                max-width: 280px;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
             }
             
             .decoration {
                 font-size: 2rem;
             }
 
-            .cta-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-
             .popup-content {
                 margin: 1rem;
                 padding: 1.5rem;
+                max-width: 90%;
+            }
+
+            .title {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0.8rem;
+            }
+
+            .invitation-text {
+                padding: 1rem;
+                margin: 1rem 0;
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 0.9rem 1.2rem;
+            }
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .decoration {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -336,7 +376,7 @@
             <a href="https://calendar.app.google/oM4nRYxT7gRErqTm7" target="_blank" rel="noopener noreferrer" class="cta-button">
                 Aceito o Convite
             </a>
-            <button onclick="showPopup()" class="cta-button" style="margin-left: 1rem;">
+            <button onclick="showPopup()" class="cta-button">
                 Doces ou Travessuras
             </button>
         </div>
@@ -366,5 +406,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9856f38e844da4e1',t:'MTc1ODkzMzY0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9856fac78426a4e1',t:'MTc1ODkzMzk0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
